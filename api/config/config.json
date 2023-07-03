@@ -1,8 +1,8 @@
 {
   "development": {
-    "username": "api_root",
+    "username": "api_ASAGA",
     "password": "123456",
-    "database": "api_usina",
+    "database": "api_ASAGA",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },

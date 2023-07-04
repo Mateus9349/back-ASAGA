@@ -30,7 +30,7 @@ class processoController {
             const novoProcessoCriado = await database.Processos.create(novoProcesso)
             return res.status(200).json(novoProcessoCriado)
         }catch (error) {
-            return req.status(500).json(error.message)
+            return res.status(500).json(error.message)
         }
     }
 

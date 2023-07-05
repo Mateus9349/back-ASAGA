@@ -20,7 +20,7 @@ module.exports = (sequelize, DataTypes) => {
     local: DataTypes.STRING
   }, {
     sequelize,
-    modelName: 'lote_final',
+    modelName: 'lote_finals',
   });
   return lote_final;
 };

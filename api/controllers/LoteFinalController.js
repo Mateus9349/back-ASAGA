@@ -30,7 +30,7 @@ class loteFinalController {
             const novoLoteFinalCriada = await database.lote_final.create(novoLoteFinal)
             return res.status(200).json(novoLoteFinalCriada)
         }catch (error) {
-            return req.status(500).json(error.message)
+            return res.status(500).json(error.message)
         }
     }
 

@@ -21,7 +21,7 @@ module.exports = (sequelize, DataTypes) => {
     vendido: DataTypes.BOOLEAN
   }, {
     sequelize,
-    modelName: 'lote_finals',
+    modelName: 'lote_final',
   });
   return lote_final;
 };

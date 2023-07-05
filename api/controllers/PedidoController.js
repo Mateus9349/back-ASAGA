@@ -30,7 +30,7 @@ class pedidoController {
             const novoPedidoCriado = await database.Pedidos.create(novoPedido)
             return res.status(200).json(novoPedidoCriado)
         }catch (error) {
-            return req.status(500).json(error.message)
+            return res.status(500).json(error.message)
         }
     }
 
@@ -43,7 +43,7 @@ class pedidoController {
             const pedidoAtualizado = await database.Pedidos.findOne({where: {id: Number(id)}})
             return res.status(200).json(pedidoAtualizado)
         }catch(error){
-            return req.status(500).json(error.message)
+            return res.status(500).json(error.message)
         }
     }
 

@@ -30,7 +30,7 @@ class GastosProdutivosController {
             const novoGastosProdutivosCriado = await database.Gastos_produtivos.create(novoGastosProdutivos)
             return res.status(200).json(novoGastosProdutivosCriado)
         }catch (error) {
-            return req.status(500).json(error.message)
+            return res.status(500).json(error.message)
         }
     }
 
@@ -43,7 +43,7 @@ class GastosProdutivosController {
             const GastosProdutivoAtualizado = await database.Gastos_produtivos.findOne({where: {id: Number(id)}})
             return res.status(200).json(GastosProdutivoAtualizado)
         }catch(error){
-            return req.status(500).json(error.message)
+            return res.status(500).json(error.message)
         }
     }
 

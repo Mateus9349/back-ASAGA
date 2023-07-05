@@ -30,7 +30,7 @@ class loteEntradaController {
             const novoLoteEntradaCriada = await database.Lote_de_entradas.create(novoLoteEntrada)
             return res.status(200).json(novoLoteEntradaCriada)
         }catch (error) {
-            return req.status(500).json(error.message)
+            return res.status(500).json(error.message)
         }
     }
 
@@ -43,7 +43,7 @@ class loteEntradaController {
             const LoteEntradaAtualizada = await database.Lote_de_entradas.findOne({where: {id: Number(id)}})
             return res.status(200).json(LoteEntradaAtualizada)
         }catch(error){
-            return req.status(500).json(error.message)
+            return res.status(500).json(error.message)
         }
     }
 

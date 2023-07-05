@@ -30,7 +30,7 @@ class extrativistaController {
             const novoExtrativistaCriado = await database.Extrativistas.create(novoExtrativista)
             return res.status(200).json(novoExtrativistaCriado)
         }catch (error) {
-            return req.status(500).json(error.message)
+            return res.status(500).json(error.message)
         }
     }
 
@@ -43,7 +43,7 @@ class extrativistaController {
             const extrativistaAtualizado = await database.Extrativistas.findOne({where: {id: Number(id)}})
             return res.status(200).json(extrativistaAtualizado)
         }catch(error){
-            return req.status(500).json(error.message)
+            return res.status(500).json(error.message)
         }
     }
 

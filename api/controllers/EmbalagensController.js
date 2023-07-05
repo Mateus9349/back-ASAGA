@@ -30,7 +30,7 @@ class embalagemController {
             const novaEmbalagemCriada = await database.Embalagens.create(novaEmbalagem)
             return res.status(200).json(novaEmbalagemCriada)
         }catch (error) {
-            return req.status(500).json(error.message)
+            return res.status(500).json(error.message)
         }
     }
 
@@ -43,7 +43,7 @@ class embalagemController {
             const embalagemAtualizada = await database.Embalagens.findOne({where: {id: Number(id)}})
             return res.status(200).json(embalagemAtualizada)
         }catch(error){
-            return req.status(500).json(error.message)
+            return res.status(500).json(error.message)
         }
     }
 

@@ -30,7 +30,7 @@ class LoginController {
             const novoLoginCriado = await database.logins.create(novoLogin)
             return res.status(200).json(novoLoginCriado)
         }catch (error) {
-            return req.status(500).json(error.message)
+            return res.status(500).json(error.message)
         }
     }
 
@@ -43,7 +43,7 @@ class LoginController {
             const loginAtualizado = await database.logins.findOne({where: {id: Number(id)}})
             return res.status(200).json(loginAtualizado)
         }catch(error){
-            return req.status(500).json(error.message)
+            return res.status(500).json(error.message)
         }
     }
 

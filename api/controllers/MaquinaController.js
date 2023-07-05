@@ -30,7 +30,7 @@ class maquinaController {
             const novaMaquinaCriada = await database.Maquinas.create(novaMaquina)
             return res.status(200).json(novaMaquinaCriada)
         }catch (error) {
-            return req.status(500).json(error.message)
+            return res.status(500).json(error.message)
         }
     }
 
@@ -43,7 +43,7 @@ class maquinaController {
             const MaquinaAtualizada = await database.Maquinas.findOne({where: {id: Number(id)}})
             return res.status(200).json(MaquinaAtualizada)
         }catch(error){
-            return req.status(500).json(error.message)
+            return res.status(500).json(error.message)
         }
     }
 

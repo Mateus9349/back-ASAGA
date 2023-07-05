@@ -43,7 +43,7 @@ class loteFinalController {
             const LoteFinalAtualizada = await database.lote_final.findOne({where: {id: Number(id)}})
             return res.status(200).json(LoteFinalAtualizada)
         }catch(error){
-            return req.status(500).json(error.message)
+            return res.status(500).json(error.message)
         }
     }
 

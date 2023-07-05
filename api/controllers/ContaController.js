@@ -31,7 +31,7 @@ class contaController {
             const novaContaCriada = await database.Contas.create(novaConta)
             return res.status(200).json(novaContaCriada)
         }catch (error) {
-            return req.status(500).json(error.message)
+            return res.status(500).json(error.message)
         }
     }
 
@@ -44,7 +44,7 @@ class contaController {
             const contaAtualizada = await database.Contas.findOne({where: {id: Number(id)}})
             return res.status(200).json(contaAtualizada)
         }catch(error){
-            return req.status(500).json(error.message)
+            return res.status(500).json(error.message)
         }
     }
 

@@ -31,7 +31,7 @@ class coletaController {
             const novaColetaCriada = await database.Coletas.create(novaColeta)
             return res.status(200).json(novaColetaCriada)
         }catch (error) {
-            return req.status(500).json(error.message)
+            return res.status(500).json(error.message)
         }
     }
 
@@ -44,7 +44,7 @@ class coletaController {
             const coletaAtualizada = await database.Coletas.findOne({where: {id: Number(id)}})
             return res.status(200).json(coletaAtualizada)
         }catch(error){
-            return req.status(500).json(error.message)
+            return res.status(500).json(error.message)
         }
     }
 

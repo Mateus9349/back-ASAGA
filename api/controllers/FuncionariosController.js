@@ -30,7 +30,7 @@ class funcionarioController {
             const novoFuncionarioCriado = await database.Funcionarios.create(novoFuncionario)
             return res.status(200).json(novoFuncionarioCriado)
         }catch (error) {
-            return req.status(500).json(error.message)
+            return res.status(500).json(error.message)
         }
     }
 
@@ -43,7 +43,7 @@ class funcionarioController {
             const funcionarioAtualizado = await database.Funcionarios.findOne({where: {id: Number(id)}})
             return res.status(200).json(funcionarioAtualizado)
         }catch(error){
-            return req.status(500).json(error.message)
+            return res.status(500).json(error.message)
         }
     }
 

@@ -13,8 +13,8 @@ routes(app)
 app.listen(port, ()=> console.log(`O servidor esta rodando na porta ${port}`));
 
 https.createServer({
-    cert: fs.readFileSync('api/SSL/fullchain.pem'),
-    key: fs.readFileSync('api/SSL/privkey.pem')
+    cert: fs.readFileSync('api/SSL/certificate.crt'),
+    key: fs.readFileSync('api/SSL/private.key')
 }, app).listen(4001, ()=> console.log('Rodando em https'));
 
 

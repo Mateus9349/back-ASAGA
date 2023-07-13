@@ -16,7 +16,7 @@ https.createServer({
     cert: fs.readFileSync('api/SSL/certificate.crt'),
     key: fs.readFileSync('api/SSL/private.key'),
     ca: fs.readFileSync('api/SSL/ca_bundle.crt')
-}, app).listen(443, ()=> console.log('Rodando em https'));
+}, app).listen(4001, ()=> console.log('Rodando em https'));
 
 
 

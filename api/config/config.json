@@ -1,7 +1,7 @@
 {
   "development": {
-    "username": "api_ASAGA",
-    "password": "123456",
+    "username": "root",
+    "password": "",
     "database": "api_ASAGA",
     "host": "127.0.0.1",
     "dialect": "mysql"
